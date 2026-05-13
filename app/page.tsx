@@ -291,7 +291,7 @@ export default function Portfolio() {
           {techStacks.map(tech => (
             <div key={tech.name}
               style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"6px", padding:"14px 16px", border:`0.5px solid ${t.borderCard}`, background:t.bgCard, minWidth:"72px", transition:"all 0.2s", cursor:"default" }}
-              onMouseOver={e=>{ e.currentTarget.style.borderColor=tech.color; e.currentTarget.style.transform="translateY(-2px)"; }}
+              onMouseOver={e=>{ e.currentTarget.style.borderColor = tech.color || t.accent; e.currentTarget.style.transform="translateY(-2px)"; }}
               onMouseOut={e=>{ e.currentTarget.style.borderColor=t.borderCard; e.currentTarget.style.transform="translateY(0)"; }}>
               
               {/* --- เปลี่ยนโค้ดตรงนี้ --- */}
